@@ -193,5 +193,7 @@ aura = ['frontier-template-runtime/aura']
 default = ['aura']
 manual-seal = ['frontier-template-runtime/manual-seal']
 runtime-benchmarks = ['frontier-template-runtime/runtime-benchmarks']
+
 [build-dependencies.substrate-build-script-utils]
 git = 'https://github.com/paritytech/substrate'
+rev = '67f28cdba85c362da17909c69c19952e3ef931c7'
