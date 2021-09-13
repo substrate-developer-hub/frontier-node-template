@@ -22,6 +22,15 @@ features = ['derive']
 package = 'parity-scale-codec'
 version = '2.0.0'
 
+[dependencies.validatorset]
+default-features = false
+package = 'substrate-validator-set'
+git = 'https://github.com/nukemandan/substrate-validator-set.git'
+
+[dependencies.pallet-session]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+
 [dependencies.fp-rpc]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
@@ -163,49 +172,51 @@ git = 'https://github.com/paritytech/substrate.git'
 [features]
 aura = []
 default = [
-    'std',
-    'aura',
+	'std',
+	'aura',
 ]
 manual-seal = []
 runtime-benchmarks = [
-    'frame-benchmarking',
-    'frame-system-benchmarking',
-    'frame-system/runtime-benchmarks',
-    'pallet-evm/runtime-benchmarks',
+	'frame-benchmarking',
+	'frame-system-benchmarking',
+	'frame-system/runtime-benchmarks',
+	'pallet-evm/runtime-benchmarks',
 ]
 std = [
-    'codec/std',
-    'serde',
-    'frame-executive/std',
-    'frame-support/std',
-    'frame-system-rpc-runtime-api/std',
-    'frame-system/std',
-    'fp-rpc/std',
-    'pallet-ethereum/std',
-    'pallet-evm/std',
-    'pallet-dynamic-fee/std',
-    'pallet-evm-precompile-simple/std',
-    'pallet-evm-precompile-sha3fips/std',
-    'pallet-aura/std',
-    'pallet-balances/std',
-    'pallet-grandpa/std',
-    'pallet-randomness-collective-flip/std',
-    'pallet-sudo/std',
-    'pallet-timestamp/std',
-    'pallet-transaction-payment-rpc-runtime-api/std',
-    'pallet-transaction-payment/std',
-    'sp-api/std',
-    'sp-block-builder/std',
-    'sp-consensus-aura/std',
-    'sp-core/std',
-    'sp-inherents/std',
-    'sp-io/std',
-    'sp-offchain/std',
-    'sp-runtime/std',
-    'sp-session/std',
-    'sp-std/std',
-    'sp-transaction-pool/std',
-    'sp-version/std',
-    'frame-benchmarking/std',
-    'frame-system-benchmarking/std',
+	'codec/std',
+	'serde',
+	'validatorset/std',
+	'pallet-session/std',
+	'frame-executive/std',
+	'frame-support/std',
+	'frame-system-rpc-runtime-api/std',
+	'frame-system/std',
+	'fp-rpc/std',
+	'pallet-ethereum/std',
+	'pallet-evm/std',
+	'pallet-dynamic-fee/std',
+	'pallet-evm-precompile-simple/std',
+	'pallet-evm-precompile-sha3fips/std',
+	'pallet-aura/std',
+	'pallet-balances/std',
+	'pallet-grandpa/std',
+	'pallet-randomness-collective-flip/std',
+	'pallet-sudo/std',
+	'pallet-timestamp/std',
+	'pallet-transaction-payment-rpc-runtime-api/std',
+	'pallet-transaction-payment/std',
+	'sp-api/std',
+	'sp-block-builder/std',
+	'sp-consensus-aura/std',
+	'sp-core/std',
+	'sp-inherents/std',
+	'sp-io/std',
+	'sp-offchain/std',
+	'sp-runtime/std',
+	'sp-session/std',
+	'sp-std/std',
+	'sp-transaction-pool/std',
+	'sp-version/std',
+	'frame-benchmarking/std',
+	'frame-system-benchmarking/std',
 ]
