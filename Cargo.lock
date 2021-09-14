@@ -1993,6 +1993,7 @@ dependencies = [
  "pallet-evm-precompile-simple",
  "pallet-grandpa",
  "pallet-randomness-collective-flip",
+ "pallet-session",
  "pallet-sudo",
  "pallet-timestamp",
  "pallet-transaction-payment",
@@ -2011,6 +2012,7 @@ dependencies = [
  "sp-std",
  "sp-transaction-pool",
  "sp-version",
+ "substrate-validator-set",
  "substrate-wasm-builder",
 ]
 
@@ -7622,6 +7624,22 @@ dependencies = [
  "log",
  "prometheus",
  "tokio 1.11.0",
+]
+
+[[package]]
+name = "substrate-validator-set"
+version = "4.0.0-dev"
+source = "git+https://github.com/nukemandan/substrate-validator-set.git?branch=frontier#f9eb0053b45e91c828929620ba66ff1ef53d6019"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "pallet-session",
+ "parity-scale-codec",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-std",
 ]
 
 [[package]]

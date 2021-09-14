@@ -26,6 +26,7 @@ version = '2.0.0'
 default-features = false
 package = 'substrate-validator-set'
 git = 'https://github.com/nukemandan/substrate-validator-set.git'
+branch = 'frontier'
 
 [dependencies.pallet-session]
 default-features = false
