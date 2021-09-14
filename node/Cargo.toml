@@ -22,31 +22,24 @@ structopt = '0.3.8'
 
 [dependencies.fc-consensus]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.fc-db]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.fc-mapping-sync]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.fc-rpc]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.fc-rpc-core]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.fp-consensus]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.fp-rpc]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.frame-benchmarking]
 git = 'https://github.com/paritytech/substrate'
@@ -61,15 +54,12 @@ path = '../runtime'
 
 [dependencies.pallet-dynamic-fee]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.pallet-ethereum]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.pallet-evm]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.pallet-transaction-payment-rpc]
 git = 'https://github.com/paritytech/substrate'
