@@ -4,6 +4,23 @@ A [FRAME](https://substrate.dev/docs/en/next/conceptual/runtime/frame)-based
 [Substrate](https://substrate.dev/en/) node with the Ethereum RPC support, ready for hacking
 :rocket:
 
+### Includes [substrate-validator-set](https://github.com/gautamdhameja/substrate-validator-set) pallet as well
+
+Watch this video to see how to run the chain and add validators -
+https://www.youtube.com/watch?v=lIYxE-tOAdw. There is a guide as well
+[available in this repo here](vset-pallet-instructions.md) To use the pallet with the `Collective`
+pallet, follow the steps in [docs/council-integration.md](./docs/council-integration.md).
+
+For testing with
+[Polkadot JS Apps/API](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/settings), you
+must set custom types:
+
+```json
+{
+  "Keys": "SessionKeys2"
+}
+```
+
 ## Generation & Upstream
 
 This template is maintained in the
@@ -74,26 +91,26 @@ inspect blocks:
 
 ```json
 {
-	"Address": "MultiAddress",
-	"LookupSource": "MultiAddress",
-	"Account": {
-		"nonce": "U256",
-		"balance": "U256"
-	},
-	"Transaction": {
-		"nonce": "U256",
-		"action": "String",
-		"gas_price": "u64",
-		"gas_limit": "u64",
-		"value": "U256",
-		"input": "Vec<u8>",
-		"signature": "Signature"
-	},
-	"Signature": {
-		"v": "u64",
-		"r": "H256",
-		"s": "H256"
-	}
+  "Address": "MultiAddress",
+  "LookupSource": "MultiAddress",
+  "Account": {
+    "nonce": "U256",
+    "balance": "U256"
+  },
+  "Transaction": {
+    "nonce": "U256",
+    "action": "String",
+    "gas_price": "u64",
+    "gas_limit": "u64",
+    "value": "U256",
+    "input": "Vec<u8>",
+    "signature": "Signature"
+  },
+  "Signature": {
+    "v": "u64",
+    "r": "H256",
+    "s": "H256"
+  }
 }
 ```
 
