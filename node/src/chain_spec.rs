@@ -1,5 +1,5 @@
 use frontier_template_runtime::{
-	AccountId, AuraConfig, BalancesConfig, GenesisConfig, GrandpaConfig,
+	AccountId, AuraConfig, BalancesConfig, EVMConfig, EthereumConfig, GenesisConfig, GrandpaConfig,
 	SudoConfig, SystemConfig, WASM_BINARY, Signature, 
 	opaque::SessionKeys, ValidatorSetConfig, SessionConfig
 };
@@ -175,13 +175,10 @@ fn testnet_genesis(
 			}).collect::<Vec<_>>(),
 		},
 		aura: AuraConfig {
-			authorities: initial_authorities.iter().map(|x| (x.0.clone())).collect(),
+			authorities: vec![],
 		},
 		grandpa: GrandpaConfig {
-			authorities: initial_authorities
-				.iter()
-				.map(|x| (x.1.clone(), 1))
-				.collect(),
+			authorities: vec![],
 		},
 		sudo: SudoConfig {
 			// Assign network admin rights.
