@@ -148,7 +148,7 @@ pub fn run() -> sc_cli::Result<()> {
 			if cfg!(feature = "runtime-benchmarks") {
 				let runner = cli.create_runner(cmd)?;
 
-				runner.sync_run(|config| cmd.run::<Block, service::Executor>(config))
+				runner.sync_run(|config| cmd.run::<Block, service::ExecutorDispatch>(config))
 			} else {
 				Err(
 					"Benchmarking wasn't enabled when building the node. You can enable it with `--features runtime-benchmarks`."
@@ -160,9 +160,6 @@ pub fn run() -> sc_cli::Result<()> {
 			let runner = cli.create_runner(&cli.run.base)?;
 			runner.run_node_until_exit(|config| async move {
 				match config.role {
-					// NOTE: light client removed, you may configure other roles here
-					// you will need `use sc_cli::Role;` added
-					// Role::Light => service::new_light(config), 
 					_ => service::new_full(config, &cli),
 				}
 				.map_err(sc_cli::Error::Service)

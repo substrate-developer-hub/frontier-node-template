@@ -9,6 +9,7 @@ name = 'frontier-template-node'
 publish = false
 repository = 'https://github.com/substrate-developer-hub/frontier-node-template/'
 version = '0.0.1'
+
 [package.metadata.docs.rs]
 targets = ['x86_64-unknown-linux-gnu']
 
@@ -22,31 +23,24 @@ structopt = '0.3.8'
 
 [dependencies.fc-consensus]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.fc-db]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.fc-mapping-sync]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.fc-rpc]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.fc-rpc-core]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.fp-consensus]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.fp-rpc]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.frame-benchmarking]
 git = 'https://github.com/paritytech/substrate'
@@ -61,15 +55,12 @@ path = '../runtime'
 
 [dependencies.pallet-dynamic-fee]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.pallet-ethereum]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.pallet-evm]
 git = 'https://github.com/paritytech/frontier.git'
-rev = '0b962f218f0cdd796dadfe26c3f09e68f7861b26'
 
 [dependencies.pallet-transaction-payment-rpc]
 git = 'https://github.com/paritytech/substrate'
@@ -158,10 +149,11 @@ git = 'https://github.com/paritytech/substrate'
 [dependencies.substrate-frame-rpc-system]
 git = 'https://github.com/paritytech/substrate'
 
+[build-dependencies.substrate-build-script-utils]
+git = 'https://github.com/paritytech/substrate'
+
 [features]
 aura = ['frontier-template-runtime/aura']
 default = ['aura']
 manual-seal = ['frontier-template-runtime/manual-seal']
 runtime-benchmarks = ['frontier-template-runtime/runtime-benchmarks']
-[build-dependencies.substrate-build-script-utils]
-git = 'https://github.com/paritytech/substrate'
