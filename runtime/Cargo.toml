@@ -108,6 +108,15 @@ git = 'https://github.com/paritytech/substrate'
 default-features = false
 git = 'https://github.com/paritytech/substrate'
 
+[dependencies.validatorset]
+default-features = false
+package = 'substrate-validator-set'
+git = 'https://github.com/riusricardo/substrate-validator-set'
+
+[dependencies.pallet-session]
+default-features = false
+git = 'https://github.com/paritytech/substrate'
+
 [dependencies.serde]
 features = ['derive']
 optional = true
@@ -195,10 +204,12 @@ std = [
     'pallet-balances/std',
     'pallet-grandpa/std',
     'pallet-randomness-collective-flip/std',
+	'pallet-session/std',
     'pallet-sudo/std',
     'pallet-timestamp/std',
     'pallet-transaction-payment-rpc-runtime-api/std',
     'pallet-transaction-payment/std',
+    'validatorset/std',
     'sp-api/std',
     'sp-block-builder/std',
     'sp-consensus-aura/std',
