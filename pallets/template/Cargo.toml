@@ -36,6 +36,10 @@ default-features = false
 features = ['derive']
 version = '1.0'
 
+[dependencies.sp-std]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+
 [dev-dependencies.sp-core]
 default-features = false
 git = 'https://github.com/paritytech/substrate.git'
