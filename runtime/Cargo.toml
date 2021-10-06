@@ -17,6 +17,10 @@ features = ['derive']
 package = 'parity-scale-codec'
 version = '2.0.0'
 
+[dependencies.pallet-template]
+default-features = false
+path = '../pallets/template'
+
 [dependencies.fp-rpc]
 default-features = false
 git = 'https://github.com/paritytech/frontier.git'
@@ -184,6 +188,7 @@ runtime-benchmarks = [
     'frame-benchmarking',
     'frame-system-benchmarking',
     'frame-system/runtime-benchmarks',
+    'pallet-template/runtime-benchmarks',
     'pallet-evm/runtime-benchmarks',
 ]
 std = [
@@ -206,6 +211,7 @@ std = [
     'pallet-randomness-collective-flip/std',
 	'pallet-session/std',
     'pallet-sudo/std',
+    'pallet-template/std',
     'pallet-timestamp/std',
     'pallet-transaction-payment-rpc-runtime-api/std',
     'pallet-transaction-payment/std',
