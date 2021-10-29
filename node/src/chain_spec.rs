@@ -150,30 +150,30 @@ pub fn staging_testnet_config() -> Result<ChainSpec, String> {
 				// Initial PoA authorities
 				vec![
 					(
-						//5FgXzzj3zV5xyp7oUAyZQaJgESodYhMVf22Ms1MTv9sqNUcJ (AURA-sr25519)
-						hex!["a0085af05e62d9dc9e369223a532621e7ae1a5ac4a66ced3a3c3ff499019675d"].into(),
-						//5FgXzzj3zV5xyp7oUAyZQaJgESodYhMVf22Ms1MTv9sqNUcJ (AURA-sr25519)
-						hex!["a0085af05e62d9dc9e369223a532621e7ae1a5ac4a66ced3a3c3ff499019675d"].unchecked_into(),
-						//5Dmxtpmi1JhHL1V31wV8Ed2h3vDsTRPCxzwNq1Bj8iUNEJa6 (GRANDPA-ed25519)
-						hex!["4bb3ea266fe3718e0afbc59184c86499266bebd88bb27c3ec652f57b1f839590"].unchecked_into(),
+						// (AURA-sr25519)
+						hex!["785f31b15e0713350916741d8dccc7045ebdb668616636a4327c121602a6e266"].into(),
+						// (AURA-sr25519)
+						hex!["785f31b15e0713350916741d8dccc7045ebdb668616636a4327c121602a6e266"].unchecked_into(),
+						// (GRANDPA-ed25519)
+						hex!["14fbc7394220422e1c0df4474508f381d9f5260dd2a894922ed21e489989aa39"].unchecked_into(),
 					),
 					(
-						//5EnHUZCRm2Zd7dQZpeLNdUVG4TFzja9pWvS4jaPJCRCVcsmw (AURA-sr25519)
-						hex!["782eb3032d128ef83801a9486f74993b5084b8010eeb57e0a8053db3f92e7078"].into(),
-						//5EnHUZCRm2Zd7dQZpeLNdUVG4TFzja9pWvS4jaPJCRCVcsmw (AURA-sr25519)
-						hex!["782eb3032d128ef83801a9486f74993b5084b8010eeb57e0a8053db3f92e7078"].unchecked_into(),
-						//5DJzWoQUJ3mka7C3g77UtwynEWDwNFWQYvikDDRhYWN9kKLu (GRANDPA-ed25519)
-						hex!["3721be3b44bddd281a88707a0906421aa44d0d305f6f150c58b65e2ebcb5ffce"].unchecked_into(),
+						// (AURA-sr25519)
+						hex!["8a556203f36e9c0491c0f655fb9a376b7ab1a028d9dffcb82cf4cae7f0609f35"].into(),
+						// (AURA-sr25519)
+						hex!["8a556203f36e9c0491c0f655fb9a376b7ab1a028d9dffcb82cf4cae7f0609f35"].unchecked_into(),
+						// (GRANDPA-ed25519)
+						hex!["eb1d6a63d637ecffc401695d6bb8f8ee5a193b424cd9a14339043b83c7fc95b4"].unchecked_into(),
 					),
 				],
 				// Sudo account
-				//5FgXzzj3zV5xyp7oUAyZQaJgESodYhMVf22Ms1MTv9sqNUcJ
-				hex!["a0085af05e62d9dc9e369223a532621e7ae1a5ac4a66ced3a3c3ff499019675d"].into(),
+				//
+				hex!["785f31b15e0713350916741d8dccc7045ebdb668616636a4327c121602a6e266"].into(),
 				// Pre-funded accounts
 				vec![
-					//5FgXzzj3zV5xyp7oUAyZQaJgESodYhMVf22Ms1MTv9sqNUcJ
-					hex!["a0085af05e62d9dc9e369223a532621e7ae1a5ac4a66ced3a3c3ff499019675d"].into(),
-					//5EnHUZCRm2Zd7dQZpeLNdUVG4TFzja9pWvS4jaPJCRCVcsmw
+					//
+					hex!["785f31b15e0713350916741d8dccc7045ebdb668616636a4327c121602a6e266"].into(),
+					//
 					hex!["782eb3032d128ef83801a9486f74993b5084b8010eeb57e0a8053db3f92e7078"].into(),
 				],
 				true,
