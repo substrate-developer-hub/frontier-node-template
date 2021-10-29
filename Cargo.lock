@@ -7593,13 +7593,14 @@ dependencies = [
 [[package]]
 name = "substrate-validator-set"
 version = "4.0.0-dev"
-source = "git+https://github.com/riusricardo/substrate-validator-set#d4d3a2a0c6c2d0cac7b33046a6abc2f2f3c517f5"
+source = "git+https://github.com/riusricardo/substrate-validator-set?rev=77faa97dec30b59d49a82bc0351e3e89cb5cc0cd#77faa97dec30b59d49a82bc0351e3e89cb5cc0cd"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "pallet-session",
  "parity-scale-codec",
+ "scale-info 1.0.0",
  "sp-core",
  "sp-io",
  "sp-runtime",

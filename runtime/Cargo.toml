@@ -116,6 +116,7 @@ git = 'https://github.com/paritytech/substrate'
 default-features = false
 package = 'substrate-validator-set'
 git = 'https://github.com/riusricardo/substrate-validator-set'
+rev = '77faa97dec30b59d49a82bc0351e3e89cb5cc0cd'
 
 [dependencies.pallet-session]
 default-features = false
