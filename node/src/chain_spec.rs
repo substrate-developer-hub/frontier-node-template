@@ -69,6 +69,7 @@ pub fn development_config() -> Result<ChainSpec, String> {
 		None,
 		// Protocol ID
 		None,
+		None,
 		// Properties
 		None,
 		// Extensions
@@ -119,6 +120,7 @@ pub fn local_testnet_config() -> Result<ChainSpec, String> {
 		None,
 		// Protocol ID
 		None,
+		None,
 		// Properties
 		None,
 		// Extensions
@@ -138,7 +140,6 @@ fn testnet_genesis(
 		system: SystemConfig {
 			// Add Wasm runtime to storage.
 			code: wasm_binary.to_vec(),
-			changes_trie_config: Default::default(),
 		},
 		balances: BalancesConfig {
 			// Configure endowed accounts with initial balance of 1 << 60.
@@ -159,7 +160,7 @@ fn testnet_genesis(
 		},
 		sudo: SudoConfig {
 			// Assign network admin rights.
-			key: root_key,
+			key: Some(root_key),
 		},
 		evm: EVMConfig {
 			accounts: {
@@ -172,7 +173,7 @@ fn testnet_genesis(
 					// Using the full hex key, truncating to the first 20 bytes (the first 40 hex chars)
 					H160::from_str("d43593c715fdd31c61141abd04a99fd6822c8558")
 						.expect("internal H160 is valid; qed"),
-					pallet_evm::GenesisAccount {
+					fp_evm::GenesisAccount {
 						balance: U256::from_str("0xffffffffffffffffffffffffffffffff")
 							.expect("internal U256 is valid; qed"),
 						code: Default::default(),
@@ -184,7 +185,7 @@ fn testnet_genesis(
 					// H160 address of CI test runner account
 					H160::from_str("6be02d1d3665660d22ff9624b7be0551ee1ac91b")
 						.expect("internal H160 is valid; qed"),
-					pallet_evm::GenesisAccount {
+					fp_evm::GenesisAccount {
 						balance: U256::from_str("0xffffffffffffffffffffffffffffffff")
 							.expect("internal U256 is valid; qed"),
 						code: Default::default(),
@@ -197,5 +198,6 @@ fn testnet_genesis(
 		},
 		ethereum: EthereumConfig {},
 		dynamic_fee: Default::default(),
+		base_fee: Default::default(),
 	}
 }
