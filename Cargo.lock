@@ -385,20 +385,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
 
 [[package]]
-name = "beefy-primitives"
-version = "4.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?branch=master#174735ea1bb5fc4513519c45181d8df63d86f613"
-dependencies = [
- "parity-scale-codec",
- "scale-info",
- "sp-api",
- "sp-application-crypto",
- "sp-core",
- "sp-runtime",
- "sp-std",
-]
-
-[[package]]
 name = "bimap"
 version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1126,19 +1112,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "curve25519-dalek"
-version = "4.0.0-pre.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4033478fbf70d6acf2655ac70da91ee65852d69daf7a67bf7a2f518fb47aafcf"
-dependencies = [
- "byteorder",
- "digest 0.9.0",
- "rand_core 0.6.3",
- "subtle",
- "zeroize",
-]
-
-[[package]]
 name = "data-encoding"
 version = "2.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1524,6 +1497,7 @@ dependencies = [
 [[package]]
 name = "fc-consensus"
 version = "2.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "async-trait",
  "fc-db",
@@ -1542,6 +1516,7 @@ dependencies = [
 [[package]]
 name = "fc-db"
 version = "2.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "fp-storage",
  "kvdb-rocksdb",
@@ -1555,6 +1530,7 @@ dependencies = [
 [[package]]
 name = "fc-mapping-sync"
 version = "2.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "fc-db",
  "fp-consensus",
@@ -1571,8 +1547,8 @@ dependencies = [
 [[package]]
 name = "fc-rpc"
 version = "2.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
- "beefy-primitives",
  "ethereum",
  "ethereum-types",
  "evm",
@@ -1580,7 +1556,6 @@ dependencies = [
  "fc-rpc-core",
  "fp-rpc",
  "fp-storage",
- "frontier-template-runtime",
  "futures 0.3.21",
  "hex",
  "jsonrpc-core",
@@ -1592,7 +1567,6 @@ dependencies = [
  "parity-scale-codec",
  "rand 0.8.4",
  "rlp",
- "sc-block-builder",
  "sc-client-api",
  "sc-network",
  "sc-rpc",
@@ -1602,19 +1576,17 @@ dependencies = [
  "sp-api",
  "sp-block-builder",
  "sp-blockchain",
- "sp-consensus",
  "sp-core",
  "sp-io",
  "sp-runtime",
  "sp-storage",
- "substrate-test-runtime-client",
- "tempfile",
  "tokio",
 ]
 
 [[package]]
 name = "fc-rpc-core"
 version = "1.1.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "ethereum",
  "ethereum-types",
@@ -1721,6 +1693,7 @@ dependencies = [
 [[package]]
 name = "fp-consensus"
 version = "2.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "ethereum",
  "parity-scale-codec",
@@ -1732,6 +1705,7 @@ dependencies = [
 [[package]]
 name = "fp-dynamic-fee"
 version = "1.0.0"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "async-trait",
  "sp-core",
@@ -1741,6 +1715,7 @@ dependencies = [
 [[package]]
 name = "fp-evm"
 version = "3.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "evm",
  "parity-scale-codec",
@@ -1752,6 +1727,7 @@ dependencies = [
 [[package]]
 name = "fp-rpc"
 version = "3.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "ethereum",
  "ethereum-types",
@@ -1768,6 +1744,7 @@ dependencies = [
 [[package]]
 name = "fp-self-contained"
 version = "1.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "ethereum",
  "frame-support",
@@ -1783,6 +1760,7 @@ dependencies = [
 [[package]]
 name = "fp-storage"
 version = "2.0.0"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "parity-scale-codec",
 ]
@@ -3006,9 +2984,6 @@ name = "lazy_static"
 version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
-dependencies = [
- "spin",
-]
 
 [[package]]
 name = "lazycell"
@@ -4278,30 +4253,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "pallet-babe"
-version = "4.0.0-dev"
-source = "git+https://github.com/paritytech/substrate?branch=master#174735ea1bb5fc4513519c45181d8df63d86f613"
-dependencies = [
- "frame-benchmarking",
- "frame-support",
- "frame-system",
- "log",
- "pallet-authorship",
- "pallet-session",
- "pallet-timestamp",
- "parity-scale-codec",
- "scale-info",
- "sp-application-crypto",
- "sp-consensus-babe",
- "sp-consensus-vrf",
- "sp-io",
- "sp-runtime",
- "sp-session",
- "sp-staking",
- "sp-std",
-]
-
-[[package]]
 name = "pallet-balances"
 version = "4.0.0-dev"
 source = "git+https://github.com/paritytech/substrate?branch=master#174735ea1bb5fc4513519c45181d8df63d86f613"
@@ -4319,6 +4270,7 @@ dependencies = [
 [[package]]
 name = "pallet-base-fee"
 version = "1.0.0"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "fp-evm",
  "frame-support",
@@ -4327,26 +4279,24 @@ dependencies = [
  "scale-info",
  "serde",
  "sp-core",
- "sp-io",
  "sp-runtime",
 ]
 
 [[package]]
 name = "pallet-dynamic-fee"
 version = "4.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "async-trait",
  "fp-dynamic-fee",
  "fp-evm",
  "frame-support",
  "frame-system",
- "pallet-timestamp",
  "parity-scale-codec",
  "scale-info",
  "serde",
  "sp-core",
  "sp-inherents",
- "sp-io",
  "sp-runtime",
  "sp-std",
 ]
@@ -4354,6 +4304,7 @@ dependencies = [
 [[package]]
 name = "pallet-ethereum"
 version = "4.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "ethereum",
  "ethereum-types",
@@ -4365,17 +4316,14 @@ dependencies = [
  "fp-storage",
  "frame-support",
  "frame-system",
- "libsecp256k1",
  "pallet-balances",
  "pallet-evm",
  "pallet-timestamp",
  "parity-scale-codec",
  "rlp",
- "rustc-hex",
  "scale-info",
  "serde",
  "sha3 0.10.1",
- "sp-core",
  "sp-io",
  "sp-runtime",
  "sp-std",
@@ -4384,6 +4332,7 @@ dependencies = [
 [[package]]
 name = "pallet-evm"
 version = "6.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "evm",
  "fp-evm",
@@ -4407,61 +4356,18 @@ dependencies = [
 ]
 
 [[package]]
-name = "pallet-evm-precompile-blake2"
-version = "2.0.0-dev"
-dependencies = [
- "fp-evm",
- "pallet-evm-test-vector-support",
-]
-
-[[package]]
-name = "pallet-evm-precompile-bn128"
-version = "2.0.0-dev"
-dependencies = [
- "fp-evm",
- "pallet-evm-test-vector-support",
- "sp-core",
- "substrate-bn",
-]
-
-[[package]]
-name = "pallet-evm-precompile-curve25519"
-version = "1.0.0-dev"
-dependencies = [
- "curve25519-dalek 4.0.0-pre.1",
- "fp-evm",
-]
-
-[[package]]
-name = "pallet-evm-precompile-dispatch"
-version = "2.0.0-dev"
-dependencies = [
- "fp-evm",
- "frame-support",
- "pallet-evm",
-]
-
-[[package]]
-name = "pallet-evm-precompile-ed25519"
-version = "2.0.0-dev"
-dependencies = [
- "ed25519-dalek",
- "fp-evm",
-]
-
-[[package]]
 name = "pallet-evm-precompile-modexp"
 version = "2.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "fp-evm",
- "hex",
  "num",
- "pallet-evm-test-vector-support",
 ]
 
 [[package]]
 name = "pallet-evm-precompile-sha3fips"
 version = "2.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "fp-evm",
  "tiny-keccak",
@@ -4470,22 +4376,11 @@ dependencies = [
 [[package]]
 name = "pallet-evm-precompile-simple"
 version = "2.0.0-dev"
+source = "git+https://github.com/paritytech/frontier.git#e2a6ce7c7a52474900106e5454308614ad0e9231"
 dependencies = [
  "fp-evm",
- "pallet-evm-test-vector-support",
  "ripemd",
  "sp-io",
-]
-
-[[package]]
-name = "pallet-evm-test-vector-support"
-version = "1.0.0-dev"
-dependencies = [
- "evm",
- "fp-evm",
- "hex",
- "serde",
- "serde_json",
 ]
 
 [[package]]
@@ -7655,19 +7550,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "substrate-bn"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "72b5bbfa79abbae15dd642ea8176a21a635ff3c00059961d1ea27ad04e5b441c"
-dependencies = [
- "byteorder",
- "crunchy",
- "lazy_static",
- "rand 0.8.4",
- "rustc-hex",
-]
-
-[[package]]
 name = "substrate-build-script-utils"
 version = "3.0.0"
 source = "git+https://github.com/paritytech/substrate?branch=master#174735ea1bb5fc4513519c45181d8df63d86f613"
@@ -7708,94 +7590,6 @@ dependencies = [
  "prometheus",
  "thiserror",
  "tokio",
-]
-
-[[package]]
-name = "substrate-test-client"
-version = "2.0.1"
-source = "git+https://github.com/paritytech/substrate?branch=master#174735ea1bb5fc4513519c45181d8df63d86f613"
-dependencies = [
- "async-trait",
- "futures 0.3.21",
- "hex",
- "parity-scale-codec",
- "sc-client-api",
- "sc-client-db",
- "sc-consensus",
- "sc-executor",
- "sc-offchain",
- "sc-service",
- "serde",
- "serde_json",
- "sp-blockchain",
- "sp-consensus",
- "sp-core",
- "sp-keyring",
- "sp-keystore",
- "sp-runtime",
- "sp-state-machine",
-]
-
-[[package]]
-name = "substrate-test-runtime"
-version = "2.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#174735ea1bb5fc4513519c45181d8df63d86f613"
-dependencies = [
- "beefy-primitives",
- "cfg-if 1.0.0",
- "frame-support",
- "frame-system",
- "frame-system-rpc-runtime-api",
- "log",
- "memory-db",
- "pallet-babe",
- "pallet-timestamp",
- "parity-scale-codec",
- "parity-util-mem",
- "sc-service",
- "scale-info",
- "serde",
- "sp-api",
- "sp-application-crypto",
- "sp-block-builder",
- "sp-consensus-aura",
- "sp-consensus-babe",
- "sp-core",
- "sp-externalities",
- "sp-finality-grandpa",
- "sp-inherents",
- "sp-io",
- "sp-keyring",
- "sp-offchain",
- "sp-runtime",
- "sp-runtime-interface",
- "sp-session",
- "sp-state-machine",
- "sp-std",
- "sp-transaction-pool",
- "sp-trie",
- "sp-version",
- "substrate-wasm-builder",
- "trie-db",
-]
-
-[[package]]
-name = "substrate-test-runtime-client"
-version = "2.0.0"
-source = "git+https://github.com/paritytech/substrate?branch=master#174735ea1bb5fc4513519c45181d8df63d86f613"
-dependencies = [
- "futures 0.3.21",
- "parity-scale-codec",
- "sc-block-builder",
- "sc-client-api",
- "sc-consensus",
- "sp-api",
- "sp-blockchain",
- "sp-consensus",
- "sp-core",
- "sp-runtime",
- "substrate-test-client",
- "substrate-test-runtime",
 ]
 
 [[package]]
